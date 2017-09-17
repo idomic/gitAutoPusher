@@ -1,11 +1,14 @@
 * Crontab-Friendly Git Update
-A trivial shell script to facilitate pushing a Git repo via =crontab(8)=. A line similar to
+Simple shell script for automatic pushing a Git repo via crontab. 
+Configure by command "crontab -e" content:
 #+BEGIN_SRC 
-22 2 * * * $HOME/bin/auto-git-push $HOME/my-repo
+* * * * * $PATH/auto-git-push $PATH/my-repo
 #+END_SRC
-in your =crontab= will cause the repo at =$HOME/my-repo= to be pushed every day at 2:22 AM.
 
-The meat of the script executes these commands:
+This specific example will run every minute. 
+This will cause the repo at =$PATH/my-repo= to be pushed every minute.
+
+Script content:
 #+BEGIN_SRC shell-script
 cd "$1"
 git add -A .
