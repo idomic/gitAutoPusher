@@ -4,5 +4,5 @@ PATH="~/bin:/sbin:/bin:/var/sbin:/var/bin:/usr/local/bin:$PATH"
 
 cd "$1"
 git add -A .
-git commit -q -m 'automated update'
+git commit -q -m '[Git Auto Pusher] Crontab automatic update'
 git push -q
