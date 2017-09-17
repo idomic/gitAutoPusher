@@ -6,3 +6,4 @@ cd "$1"
 git add -A .
 git commit -q -m '[Git Auto Pusher] Crontab automatic update'
 git push -q
+

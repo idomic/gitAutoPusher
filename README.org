@@ -1,6 +1,7 @@
 * Crontab-Friendly Git Update
 Simple shell script for automatic pushing a Git repo via crontab. 
 Configure by command =crontab -e= content:
+
 #+BEGIN_SRC 
 * * * * * $PATH/auto-git-push $PATH/my-repo
 #+END_SRC
