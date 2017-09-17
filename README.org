@@ -18,4 +18,9 @@ git push -q
 
 The =-q= flags will silence =git= unless an error occurs. This prevents =crontab= from sending email unless an actual error has occurred.
 
-The script also tries to set a reasonable =PATH=. My guess is that this script will run on *NIX systems without modification. I'll leave configuring it for Cygwin as an exercise to the reader :-)
+The main asumption was that the user uses Linux system.
+Also in order to use the script you should set your git credentials at the global configuration file.
+
+My recommendation is to test the script first to see everything is working well and set up prior to configuring the crontab job.
+
+If there's any comments or suggestions to improve it just ping me at michael.ido@gmail.com, I can add you to collaborators and discuss further improvements. 
