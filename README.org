@@ -23,4 +23,7 @@ Also in order to use the script you should set your git credentials at the globa
 
 My recommendation is to test the script first to see everything is working well and set up prior to configuring the crontab job.
 
-If there's any comments or suggestions to improve it just ping me at michael.ido@gmail.com, I can add you to collaborators and discuss further improvements. 
+For any comments or suggestions to improve the script just ping me at michael.ido@gmail.com, I can add you to collaborators and discuss further improvements.
+
+You can also send request through this direct repository.
+ 
