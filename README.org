@@ -1,0 +1,18 @@
+* Crontab-Friendly Git Update
+A trivial shell script to facilitate pushing a Git repo via =crontab(8)=. A line similar to
+#+BEGIN_SRC 
+22 2 * * * $HOME/bin/auto-git-push $HOME/my-repo
+#+END_SRC
+in your =crontab= will cause the repo at =$HOME/my-repo= to be pushed every day at 2:22 AM.
+
+The meat of the script executes these commands:
+#+BEGIN_SRC shell-script
+cd "$1"
+git add -A .
+git commit -q -m 'automated update'
+git push -q
+#+END_SRC
+
+The =-q= flags will silence =git= unless an error occurs. This prevents =crontab= from sending email unless an actual error has occurred.
+
+The script also tries to set a reasonable =PATH=. My guess is that this script will run on *NIX systems without modification. I'll leave configuring it for Cygwin as an exercise to the reader :-)
